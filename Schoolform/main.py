@@ -4,6 +4,7 @@ class Registration:
     # data_entry= 0
 
     def __init__(self):
+        print("Enter the students name")
         self.FirstName = input("Enter Your First Name: ").lower()
         self.LastName = input("Enter Your Last Name: ").lower()
 
@@ -37,9 +38,13 @@ class Registration:
 
         else:
             print("Please Enter the Valid Age!!")
-                    
-        self.Allergies = input("Enter In Your Allergies: ").lower().split(",")
 
+       
+        self.Allergies = input("Enter In Your Allergies: ").split()
+        for allergy in self.Allergies:
+            print(allergy)
+
+        print ("The following displays the grade your child is in, please select.")
         while True:       
             print("1.Top class")
             print("2.Baby class")
