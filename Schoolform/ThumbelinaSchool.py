@@ -3,8 +3,6 @@
 import csv
 
 class Registration:
-    # A loop that creates the total number of students that have entered data.
-
     def __init__(self):
 
         # Entry of the name..
@@ -69,7 +67,10 @@ class Registration:
             else:
                 print("ENTER A VALID INPUT")
 
+
         #Entering the phonenumber...
+class Phonenumber(Registration):
+    def __init__(self):
         self.phonenumber= "+256"
         while True:
             self.phone_number = input("Enter a valid Phonenumber of 9 digits: ")
@@ -79,6 +80,9 @@ class Registration:
             else:
                 print("INVALID PHONENUMBER")
 
+
+class Email(Registration):
+    def __init__(self):
         self.email= "<EMAIL>"
         while True:
             self.email = input("Enter a valid Email: ")
@@ -97,5 +101,9 @@ print(f"Gender: {reg.Gender}")
 print(f"Age: {reg.Age}")
 print(f"Allergies: {reg.Allergies}")
 print(f"Grade: {reg.Grade}")
-print(f"Phone Number: {reg.phonenumber} {reg.phone_number}")
-print(f"Email: {reg.email}")
+
+phonenumber = Phonenumber()
+print(f"Phone Number: {phonenumber.phonenumber} {phonenumber.phone_number}")
+
+email = Email()
+print(f"Email: {email.email}")
