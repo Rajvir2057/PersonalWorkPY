@@ -96,25 +96,11 @@ class Email(Registration):
                 print("INVALID EMAIL")
 
                 
-class Password(Registration):
-    def __init__(self):
-        self.password= "<PASSWORD>"
-        while True:
-            self.password = getpass.getpass("Enter a valid Password: ")
-            if len(self.password) >= 8:
-                print(self.password)
-                break
-            else:
-                print("INVALID PASSWORD")
-
-
     more = input("Do you want to register another student? (yes/no): ").lower()
     if more != 'yes':
-    
         print("Thank you for registering your child!")
      
     Registration.data_entry += 1 
-
     print(f"The Total Entry of Students: {Registration.data_entry}")
 
 # froming objects out of the class
@@ -131,6 +117,3 @@ print(f"Phone Number: {phonenumber.phonenumber} {phonenumber.phone_number}")
 
 email = Email()
 print(f"Email: {email.email}")
-
-password = Password()
-print(f"Password: {password.password}")
