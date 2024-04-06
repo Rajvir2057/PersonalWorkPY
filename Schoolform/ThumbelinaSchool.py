@@ -1,5 +1,7 @@
 # this is the base class.
 # Student registration..
+import csv
+import getpass
 
 class Registration:
     # A loop that creates the total number of students that have entered data.
@@ -98,7 +100,7 @@ class Password(Registration):
     def __init__(self):
         self.password= "<PASSWORD>"
         while True:
-            self.password = input("Enter a valid Password: ")
+            self.password = getpass.getpass("Enter a valid Password: ")
             if len(self.password) >= 8:
                 print(self.password)
                 break
