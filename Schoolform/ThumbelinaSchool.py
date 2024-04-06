@@ -5,7 +5,7 @@ import getpass
 
 class Registration:
     # A loop that creates the total number of students that have entered data.
-    # data_entry= 0
+    data_entry= 0
 
     def __init__(self):
 
@@ -108,9 +108,14 @@ class Password(Registration):
                 print("INVALID PASSWORD")
 
 
-    # Registration.data_entry += 1 
+    more = input("Do you want to register another student? (yes/no): ").lower()
+    if more != 'yes':
+    
+        print("Thank you for registering your child!")
+     
+    Registration.data_entry += 1 
 
-# print(f"The Total Entry of Students: {Registration.data_entry}")
+    print(f"The Total Entry of Students: {Registration.data_entry}")
 
 # froming objects out of the class
 reg = Registration()
