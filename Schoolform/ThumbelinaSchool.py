@@ -1,11 +1,9 @@
 # this is the base class.
 # Student registration..
 import csv
-import getpass
 
 class Registration:
     # A loop that creates the total number of students that have entered data.
-    data_entry= 0
 
     def __init__(self):
 
@@ -71,10 +69,7 @@ class Registration:
             else:
                 print("ENTER A VALID INPUT")
 
-
         #Entering the phonenumber...
-class Phonenumber(Registration):
-    def __init__(self):
         self.phonenumber= "+256"
         while True:
             self.phone_number = input("Enter a valid Phonenumber of 9 digits: ")
@@ -84,8 +79,6 @@ class Phonenumber(Registration):
             else:
                 print("INVALID PHONENUMBER")
 
-class Email(Registration):
-    def __init__(self):
         self.email= "<EMAIL>"
         while True:
             self.email = input("Enter a valid Email: ")
@@ -95,13 +88,6 @@ class Email(Registration):
             else:
                 print("INVALID EMAIL")
 
-                
-    more = input("Do you want to register another student? (yes/no): ").lower()
-    if more != 'yes':
-        print("Thank you for registering your child!")
-     
-    Registration.data_entry += 1 
-    print(f"The Total Entry of Students: {Registration.data_entry}")
 
 # froming objects out of the class
 reg = Registration()
@@ -111,9 +97,5 @@ print(f"Gender: {reg.Gender}")
 print(f"Age: {reg.Age}")
 print(f"Allergies: {reg.Allergies}")
 print(f"Grade: {reg.Grade}")
-
-phonenumber = Phonenumber()
-print(f"Phone Number: {phonenumber.phonenumber} {phonenumber.phone_number}")
-
-email = Email()
-print(f"Email: {email.email}")
+print(f"Phone Number: {reg.phonenumber} {reg.phone_number}")
+print(f"Email: {reg.email}")
